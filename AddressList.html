@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="assets/css/elementui.css">
+    <title>AddressList</title>
+</head>
+
+<body>
+    <div id="app">
+        <h2>Bitcoin Address Addresses are identifiers which you use to send bitcoins to another person.</h2><br>
+
+        <h3>Summary</h3><br>
+
+        Address  ：{{addressByListDeail[0].address}}<br>
+
+        Hash 160 :{{addressByListDeail[0].txhash}}<br>
+
+        <h3>Transactions</h3><br>
+
+        No. Transactions:{{addressByListDeail[0].confirmations}}<br>
+
+        Total Received:{{addressByListDeail[0].amount}}<br>
+    </div>
+
+    <script src="assets/js/axios.min.js"></script>
+    <script src="assets/js/common.js"></script>
+    <script src="assets/js/vue.js"></script>
+    <script src="assets/js/elementui.js"></script>
+    <script src="viewmodels/AddressList.js"></script>
+</body>
+
+</html>

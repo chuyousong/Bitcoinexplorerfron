@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="assets/css/elementui.css">
+    <title>BlockIndex</title>
+</head>
+
+<body>
+    <div id="app">
+            <el-main>
+                <el-tabs type="border-card">
+                        <el-table :data="getList" style="width: 100%">
+                            <el-table-column prop="blockhash" label="Blockhash">
+                            </el-table-column>
+                            <el-table-column prop="height" label="Height">
+                            </el-table-column>
+                            <el-table-column prop="time" label="Age">
+                            </el-table-column>
+                            <el-table-column prop="size" label="Size (bytes)">
+                            </el-table-column>
+                        </el-table>
+                </el-tabs>
+            </el-main>
+
+
+
+        </el-container>
+    </div>
+
+    <script src="assets/js/axios.min.js"></script>
+    <script src="assets/js/common.js"></script>
+    <script src="assets/js/vue.js"></script>
+    <script src="assets/js/elementui.js"></script>
+    <script src="viewmodels/BlockView.js"></script>
+</body>
+
+</html>

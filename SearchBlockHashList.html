@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="assets/css/elementui.css">
+    <title>SearchBlockHashList</title>
+</head>
+
+<body>
+    <div id="app">
+        <h1 style="color:  rgb(221, 42, 42)">Block</h1>
+
+        Number Of Transactions: {{SearchByListDetail.numberOfTransactions}} <br><br>
+
+        Output Total: {{SearchByListDetail.outputTotal}} <br><br>
+
+        Height: {{SearchByListDetail.height}} <br><br>
+
+        Timestamp: {{SearchByListDetail.time}} <br><br>
+
+        Difficulty: {{SearchByListDetail.difficulty}} <br><br>
+
+        Bits:{{SearchByListDetail.bits}} <br><br>
+
+        Size:{{SearchByListDetail.size}} <br><br>
+
+        Weight:{{SearchByListDetail.weight}} <br><br>
+
+        Version:{{SearchByListDetail.version}} <br><br>
+
+        Nonce:{{SearchByListDetail.nonce}} <br><br>
+
+        Hash:{{SearchByListDetail.blockhash}} <br><br>
+
+        Previous Block:{{SearchByListDetail.previousBlock}} <br><br>
+
+        Next Block(s):{{SearchByListDetail.nextBlock}} <br><br>
+    </div>
+
+    <script src="assets/js/axios.min.js"></script>
+    <script src="assets/js/common.js"></script>
+    <script src="assets/js/vue.js"></script>
+    <script src="assets/js/elementui.js"></script>
+    <script src="viewmodels/SearchBlockHashList.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="assets/css/elementui.css">
+    <title>TransactionsTxhash</title>
+</head>
+
+<body>
+    <div id="app">
+        <h1>Transaction View information about a bitcoin transaction</h1>
+        Txhash: {{HashByListDetail.txhash}} <br><br>
+        Received Time: {{HashByListDetail.time}} <br><br>
+        Amount: {{HashByListDetail.amount}} <br><br>
+        Size: {{HashByListDetail.size}} <br><br>
+        Weight: {{HashByListDetail.weight}} <br><br>
+        Total Input:{{HashByListDetail.totalInput}} <br><br>
+        Total Output:{{HashByListDetail.totalOutput}} <br><br>
+    </div>
+
+    <script src="assets/js/axios.min.js"></script>
+    <script src="assets/js/common.js"></script>
+    <script src="assets/js/vue.js"></script>
+    <script src="assets/js/elementui.js"></script>
+    <script src="viewmodels/transactionsTxhasha.js"></script>
+</body>
+
+</html>

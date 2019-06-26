@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="assets/css/elementui.css">
+    <title>BlockHeightList</title>
+</head>
+
+<body>
+    <div id="app">
+        <h1 style="color:  rgb(221, 42, 42)">Block</h1>
+
+        Number Of Transactions: {{HeightByListDetail.numberOfTransactions}} <br><br>
+
+        Output Total: {{HeightByListDetail.outputTotal}} <br><br>
+
+        Height: {{HeightByListDetail.height}} <br><br>
+
+        Timestamp: {{HeightByListDetail.time}} <br><br>
+
+        Difficulty: {{HeightByListDetail.difficulty}} <br><br>
+
+        Bits:{{HeightByListDetail.bits}} <br><br>
+
+        Size:{{HeightByListDetail.size}} <br><br>
+
+        Weight:{{HeightByListDetail.weight}} <br><br>
+
+        Version:{{HeightByListDetail.version}} <br><br>
+
+        Nonce:{{HeightByListDetail.nonce}} <br><br>
+
+        Hash:{{HeightByListDetail.blockhash}} <br><br>
+
+        Previous Block:{{HeightByListDetail.previousBlock}} <br><br>
+
+        Next Block(s):{{HeightByListDetail.nextBlock}} <br><br>
+    </div>
+
+    <script src="assets/js/axios.min.js"></script>
+    <script src="assets/js/common.js"></script>
+    <script src="assets/js/vue.js"></script>
+    <script src="assets/js/elementui.js"></script>
+    <script src="viewmodels/BlockHeightList.js"></script>
+</body>
+
+</html>
