@@ -15,7 +15,7 @@
 
         <h3>Summary</h3><br>
 
-        Address  ：{{addressByListDeail[0].address}}<br>
+        Address ：{{addressByListDeail[0].address}}<br>
 
         Hash 160 :{{addressByListDeail[0].txhash}}<br>
 
@@ -23,13 +23,18 @@
 
         No. Transactions:{{addressByListDeail[0].confirmations}}<br>
 
-        Total Received:{{addressByListDeail[0].amount}}<br>
+        Total Received:{{addressByListDeail[0].amount}}
+    </div>
+    <div id="app1">
+        <div id="qrcode"></div>
     </div>
 
     <script src="assets/js/axios.min.js"></script>
     <script src="assets/js/common.js"></script>
     <script src="assets/js/vue.js"></script>
     <script src="assets/js/elementui.js"></script>
+    <script src="assets/js/qrcode.min.js"></script>
+    <script src="assets/js/watermark.min.js"></script>
     <script src="viewmodels/AddressList.js"></script>
 </body>
 

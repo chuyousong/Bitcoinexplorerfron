@@ -48,7 +48,7 @@
             <el-main>
                 <el-tabs type="border-card">
                     <el-tab-pane label="BLOCKS" @click="selectBlock">
-                        <el-table :data="blockList" style="width: 100%">
+                        <el-table :data="getList" style="width: 100%">
                             <el-table-column prop="blockhash" label="Blockhash">
                             </el-table-column>
                             <el-table-column prop="height" label="Height">
@@ -70,8 +70,6 @@
                     </el-tab-pane>
 
                     <el-tab-pane label="TRANSACTIONS" @click="selecttransaction">
-                        <el-button type="primary" @click="handleConnect">连接</el-button>
-                        <el-button type="primary" @click="handleDisconnect">断开</el-button>
                         <el-table :data="gettransactionsLista" style="width: 100%">
                             <el-table-column prop="txhash" label="Transaction Hash">
                                 <template slot-scope="scope">

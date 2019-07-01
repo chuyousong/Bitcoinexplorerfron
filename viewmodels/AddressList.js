@@ -39,5 +39,23 @@ var app = new Vue({
           console.log(error);
         });
     }
+  
+
   }
+})
+var app1 = new Vue({
+  el: '#app1',
+  data: {
+    
+  },
+  mounted() {
+    qrcode = new QRCode(document.getElementById("qrcode"), {
+      text: "https://www.blockchain.com/zh-cn/explorer",
+      width: 128,
+      height: 128,
+      colorDark: "#000000",
+      colorLight: "#ffffff",
+      correctLevel: QRCode.CorrectLevel.H
+    });
+  },
 })

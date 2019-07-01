@@ -19,14 +19,20 @@ var app = new Vue({
     getList() {
       var now = Date.now();
       this.blockList.forEach(block => {
-        var time1 = block.time.replace(/-/g, '/');
-        block.time = parseInt((now - new Date(time1).getTime()) / 1000 / 60) + " minutes";
+        var time2 = this.myTime(block.time);
+        var date = new Date(time2);
+        block.time = parseInt((now - date.getTime()) / 1000 / 60) + " minutes";
         block.size = block.size.toLocaleString('en');
       });
       return this.blockList;
     },
     gettransactionsLista() {
+      var now = Date.now();
       this.transactionsList.forEach(tran => {
+        var time2 = this.myTime(tran.time);
+        var date = new Date(time2);
+        tran.time = parseInt((now - date.getTime()) / 1000 / 60) + " minutes";
+        tran.size = tran.size.toLocaleString('en');
         var a = tran.amount1 = "$" + tran.amount * 8350;
       })
       return this.transactionsList;
@@ -34,9 +40,22 @@ var app = new Vue({
   },
   mounted() {
     this.getSelectListBlocks();
+    this.handleConnect();
     // this.getSelectListTransactions();
   },
-  methods: {
+  methods: {                                             
+    myTime(date){
+          var arr=date.split("T");
+          var d=arr[0];
+         var darr = d.split('-');
+      
+         var t=arr[1];
+         var tarr = t.split('.000');
+         var marr = tarr[0].split(':');
+      
+         var dd = parseInt(darr[0])+"/"+parseInt(darr[1])+"/"+parseInt(darr[2])+" "+parseInt(marr[0])+":"+parseInt(marr[1])+":"+parseInt(marr[2]);
+       return dd;
+      },
     getSelectListBlocks() {   // 获取block的信息
       axios.get('/block/getSelectListBlocks')
         .then(function (response) {
@@ -85,11 +104,6 @@ var app = new Vue({
         location.href = "AddressList.html?searchname=" + search;
       }
     },
-    handleDisconnect() {// 推送
-      console.log('disconnect click');
-      this.stompclient.disconnect();
-    },
-
     selectBlock() {
       this.getSelectListBlocks();
     },
@@ -120,5 +134,6 @@ var app = new Vue({
     autoHeight() {
       this.search = "1564830";
     }
-  }
+  } 
+
 })

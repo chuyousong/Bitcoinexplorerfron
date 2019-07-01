@@ -13,15 +13,28 @@
     <div id="app">
             <el-main>
                 <el-tabs type="border-card">
+                    
+                    <h1 style="text-align: center"> << Previous Blocks mined on:24/06/2019 Next >> </h1>
                         <el-table :data="getList" style="width: 100%">
-                            <el-table-column prop="blockhash" label="Blockhash">
-                            </el-table-column>
                             <el-table-column prop="height" label="Height">
+                                <template slot-scope="scope">
+                                    <a @click="getClickHeights(scope.row.height)"
+                                        style="color: rgb(75, 75, 233)">{{scope.row.height}}</a>
+                                </template>
                             </el-table-column>
-                            <el-table-column prop="time" label="Age">
+                            <el-table-column prop="time" label="Time">
+                            </el-table-column>
+                            <el-table-column prop="blockhash" label="Hash">
+                                <template slot-scope="scope">
+                                    <a @click="getClickHashs(scope.row.blockhash)"
+                                        style="color: rgb(75, 75, 233)">{{scope.row.blockhash}}</a>
+                                </template>
                             </el-table-column>
                             <el-table-column prop="size" label="Size (bytes)">
                             </el-table-column>
+
+
+                            
                         </el-table>
                 </el-tabs>
             </el-main>

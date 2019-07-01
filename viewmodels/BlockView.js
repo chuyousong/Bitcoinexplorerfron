@@ -7,7 +7,7 @@ var app = new Vue({
     getList() {
       this.viewMoreList.forEach(block => {
         block.time = block.time.substr(0,10);
-        block.weight = block.weight.toLocaleString('en');
+       // block.weight = block.weight.toLocaleString('en');
         block.size = block.size.toLocaleString('en');
       });
       return this.viewMoreList;
@@ -18,7 +18,7 @@ var app = new Vue({
   },
   methods: {
     getViewMore() {
-      axios.get('/block/getSelectListBlocks')
+      axios.get('/block/getSelectListBlocksView')
         .then(function (response) {
           console.log(response);
           app.viewMoreList = response.data;
@@ -26,6 +26,12 @@ var app = new Vue({
         .catch(function (error) {
           console.log(error);
         });
+    },
+    getClickHeights(row) {
+      location.href = "BlockHeightList.html?height=" + row;
+    },
+    getClickHashs(row){
+      location.href = "SearchBlockHashList.html?searchname=" + row; 
     }
   }
 })
